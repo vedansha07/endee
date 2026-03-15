@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic Resume Search</title>
+    <style>
+        :root {
+            --primary: #4F46E5;
+            --primary-hover: #4338CA;
+            --bg: #F9FAFB;
+            --card-bg: #FFFFFF;
+            --text-main: #111827;
+            --text-muted: #6B7280;
+            --border: #E5E7EB;
+            --success: #10B981;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+        }
+
+        p.subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid var(--border);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--bg);
+            padding-bottom: 0.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+        }
+
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 1rem;
+            box-sizing: border-box;
+            font-family: inherit;
+            transition: border-color 0.15s ease-in-out;
+        }
+
+        input[type="text"]:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        button {
+            background-color: var(--primary);
+            color: white;
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.15s ease-in-out;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: var(--primary-hover);
+        }
+
+        button:disabled {
+            background-color: var(--border);
+            cursor: not-allowed;
+            color: var(--text-muted);
+        }
+
+        .feedback {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 8px;
+            display: none;
+        }
+
+        .feedback.success {
+            display: block;
+            background-color: #D1FAE5;
+            color: #065F46;
+            border: 1px solid #34D399;
+        }
+
+        .feedback.error {
+            display: block;
+            background-color: #FEE2E2;
+            color: #991B1B;
+            border: 1px solid #F87171;
+        }
+
+        .result-item {
+            padding: 1.5rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            background-color: #FAFAFA;
+        }
+
+        .result-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .result-id {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--primary);
+        }
+
+        .result-score {
+            background-color: #E0E7FF;
+            color: var(--primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            font-size: 0.875rem;
+        }
+
+        .result-text {
+            color: var(--text-muted);
+            line-height: 1.6;
+            white-space: pre-wrap;
+        }
+        
+        .loader {
+            border: 3px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 3px solid var(--primary);
+            width: 20px;
+            height: 20px;
+            -webkit-animation: spin 1s linear infinite; /* Safari */
+            animation: spin 1s linear infinite;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 8px;
+            display: none;
+        }
+
+        /* Safari */
+        @-webkit-keyframes spin {
+            0% { -webkit-transform: rotate(0deg); }
+            100% { -webkit-transform: rotate(360deg); }
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Semantic Resume Search</h1>
+            <p class="subtitle">Powered by Endee Vector Database & Sentence Transformers</p>
+        </header>
+
+        <!-- Upload Section -->
+        <div class="card">
+            <h2>📤 Upload Resume</h2>
+            <form id="uploadForm">
+                <div class="form-group">
+                    <label for="resumeId">Resume ID / Candidate Name</label>
+                    <input type="text" id="resumeId" placeholder="e.g., john-doe-resume" required>
+                </div>
+                <div class="form-group">
+                    <label for="resumeText">Resume Text</label>
+                    <textarea id="resumeText" placeholder="Paste the full text of the resume here..." required></textarea>
+                </div>
+                <button type="submit" id="uploadBtn">
+                    <span class="loader" id="uploadLoader"></span>
+                    Upload and Generate Embeddings
+                </button>
+            </form>
+            <div id="uploadFeedback" class="feedback"></div>
+        </div>
+
+        <!-- Search Section -->
+        <div class="card">
+            <h2>🔍 Search Candidates</h2>
+            <form id="searchForm">
+                <div class="form-group">
+                    <label for="searchQuery">Job Description / Semantic Query</label>
+                    <textarea id="searchQuery" placeholder="e.g., Looking for a backend engineer with Python and distributed systems experience..." required></textarea>
+                </div>
+                <button type="submit" id="searchBtn">
+                    <span class="loader" id="searchLoader"></span>
+                    Search Database
+                </button>
+            </form>
+            <div id="searchFeedback" class="feedback"></div>
+            
+            <div id="resultsContainer" style="margin-top: 2rem; display: none;">
+                <h3 style="margin-bottom: 1rem; color: var(--text-main);">Top Matching Candidates</h3>
+                <div id="resultsList"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_URL = 'http://127.0.0.1:8000';
+
+        // Upload Logic
+        document.getElementById('uploadForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = document.getElementById('uploadBtn');
+            const loader = document.getElementById('uploadLoader');
+            const feedback = document.getElementById('uploadFeedback');
+            
+            const resumeId = document.getElementById('resumeId').value;
+            const text = document.getElementById('resumeText').value;
+
+            btn.disabled = true;
+            loader.style.display = 'inline-block';
+            feedback.className = 'feedback';
+
+            try {
+                const response = await fetch(`${API_URL}/upload`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ resume_id: resumeId, text: text })
+                });
+
+                if (!response.ok) throw new Error('Failed to upload resume');
+                
+                feedback.textContent = '✅ Resume successfully stored and embedded in Endee!';
+                feedback.className = 'feedback success';
+                document.getElementById('uploadForm').reset();
+            } catch (err) {
+                feedback.textContent = `❌ Error: ${err.message}`;
+                feedback.className = 'feedback error';
+            } finally {
+                btn.disabled = false;
+                loader.style.display = 'none';
+            }
+        });
+
+        // Search Logic
+        document.getElementById('searchForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = document.getElementById('searchBtn');
+            const loader = document.getElementById('searchLoader');
+            const feedback = document.getElementById('searchFeedback');
+            const resultsContainer = document.getElementById('resultsContainer');
+            const resultsList = document.getElementById('resultsList');
+            
+            const query = document.getElementById('searchQuery').value;
+
+            btn.disabled = true;
+            loader.style.display = 'inline-block';
+            feedback.className = 'feedback';
+            resultsContainer.style.display = 'none';
+            resultsList.innerHTML = '';
+
+            try {
+                const response = await fetch(`${API_URL}/search`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ job_description: query })
+                });
+
+                if (!response.ok) throw new Error('Failed to perform search');
+                
+                const data = await response.json();
+                
+                if (data.length === 0) {
+                    feedback.textContent = 'No matching resumes found. Try uploading some first!';
+                    feedback.className = 'feedback error';
+                } else {
+                    data.forEach(result => {
+                        const scorePct = (result.score * 100).toFixed(1);
+                        const item = document.createElement('div');
+                        item.className = 'result-item';
+                        item.innerHTML = `
+                            <div class="result-header">
+                                <span class="result-id">${result.id}</span>
+                                <span class="result-score">Similarity: ${scorePct}%</span>
+                            </div>
+                            <div class="result-text">${result.metadata.text}</div>
+                        `;
+                        resultsList.appendChild(item);
+                    });
+                    resultsContainer.style.display = 'block';
+                }
+            } catch (err) {
+                feedback.textContent = `❌ Error: ${err.message}`;
+                feedback.className = 'feedback error';
+            } finally {
+                btn.disabled = false;
+                loader.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

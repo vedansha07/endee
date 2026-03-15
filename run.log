@@ -85,3 +85,31 @@ WARN_1019: endee/resumes: Create-index request failed: Index with this name alre
 (2026-03-15 17:03:02) [INFO    ] Request: 127.0.0.1:64026 0xafb05c018 HTTP/1.1 POST /api/v1/index/resumes/search
 (2026-03-15 17:03:02) [INFO    ] Response: 0xafb05c018 /api/v1/index/resumes/search 200 0
 INFO_2012: -/-: Autosave check running
+(2026-03-15 17:11:07) [INFO    ] Request: 127.0.0.1:64093 0xafb05d418 HTTP/1.1 DELETE /api/v1/index/resumes/delete
+(2026-03-15 17:11:07) [INFO    ] Response: 0xafb05d418 /api/v1/index/resumes/delete 200 0
+INFO_2012: -/-: Autosave check running
+INFO_2012: -/-: Autosave check running
+INFO_2012: -/-: Autosave check running
+INFO_2012: -/-: Autosave check running
+INFO_2012: -/-: Autosave check running
+(2026-03-15 17:35:57) [INFO    ] Request: 127.0.0.1:64236 0xafb05c018 HTTP/1.1 POST /api/v1/index/create
+INFO_2021: endee/resumes: Creating ID mapper with user type Admin
+INFO_2001: endee/resumes: Creating cache entry
+INFO_2005: endee/resumes: Assigning index id
+INFO_2006: endee/resumes: Moving algorithm instance
+INFO_2007: endee/resumes: Cache entry construction completed
+INFO_2022: endee/resumes: Saving newly created index
+(2026-03-15 17:35:57) [INFO    ] Response: 0xafb05c018 /api/v1/index/create 200 0
+INFO_2012: -/-: Autosave check running
+(2026-03-15 17:36:34) [INFO    ] Request: 127.0.0.1:64244 0xafb05d418 HTTP/1.1 POST /api/v1/index/create
+WARN_1019: endee/resumes: Create-index request failed: Index with this name already exists for this user
+(2026-03-15 17:36:34) [INFO    ] Response: 0xafb05d418 /api/v1/index/create 409 0
+(2026-03-15 17:36:34) [INFO    ] Request: 127.0.0.1:64244 0xafb05d418 HTTP/1.1 GET /api/v1/index/resumes/info
+(2026-03-15 17:36:34) [INFO    ] Response: 0xafb05d418 /api/v1/index/resumes/info 200 0
+(2026-03-15 17:36:34) [INFO    ] Request: 127.0.0.1:64244 0xafb05d418 HTTP/1.1 POST /api/v1/index/resumes/vector/insert
+(2026-03-15 17:36:34) [INFO    ] Response: 0xafb05d418 /api/v1/index/resumes/vector/insert 200 0
+(2026-03-15 17:36:46) [INFO    ] Request: 127.0.0.1:64247 0xafb05c018 HTTP/1.1 POST /api/v1/index/create
+WARN_1019: endee/resumes: Create-index request failed: Index with this name already exists for this user
+(2026-03-15 17:36:46) [INFO    ] Response: 0xafb05c018 /api/v1/index/create 409 0
+(2026-03-15 17:36:46) [INFO    ] Request: 127.0.0.1:64247 0xafb05c018 HTTP/1.1 POST /api/v1/index/resumes/search
+(2026-03-15 17:36:46) [INFO    ] Response: 0xafb05c018 /api/v1/index/resumes/search 200 0

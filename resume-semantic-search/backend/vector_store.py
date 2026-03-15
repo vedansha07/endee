@@ -1,22 +1,34 @@
-from endee import Client
+from endee import Endee
 
-client = Client()
+client = Endee()
 
-try:
-    collection = client.create_collection("resumes")
-except Exception:
-    collection = client.get_collection("resumes")
+def get_collection():
+    try:
+        return client.create_index("resumes", dimension=384, space_type="cosine")
+    except Exception:
+        return client.get_index("resumes")
 
 def store_resume(resume_id: str, text: str, embedding: list):
-    collection.add(
-        id=resume_id,
-        vector=embedding,
-        metadata={"text": text}
-    )
+    collection = get_collection()
+    collection.upsert([
+        {
+            "id": resume_id,
+            "vector": list(embedding),
+            "meta": {"text": text}
+        }
+    ])
 
 def search_resumes(query_embedding: list):
-    results = collection.search(
-        vector=query_embedding,
+    collection = get_collection()
+    response = collection.query(
+        vector=list(query_embedding),
         top_k=5
     )
+    results = []
+    for res in response:
+        results.append({
+            "id": res["id"],
+            "score": res["similarity"],
+            "metadata": res.get("meta", {})
+        })
     return results

@@ -1,0 +1,85 @@
+[INFO] Selected Build Mode: release
+[INFO] Identifying environment...
+[INFO] Environment: OS_FAMILY=mac, ARCH=arm64, DISTRO=macos (unknown)
+[INFO] Installing brew formula: cmake
+==> Auto-updating Homebrew...
+Adjust how often this is run with `$HOMEBREW_AUTO_UPDATE_SECS` or disable with
+`$HOMEBREW_NO_AUTO_UPDATE=1`. Hide these hints with `$HOMEBREW_NO_ENV_HINTS=1` (see `man brew`).
+==> Downloading https://ghcr.io/v2/homebrew/core/portable-ruby/blobs/sha256:cef6f881f516d2cdbd0a5bfc7e20318da8b047cf2674ee27c5d4858d3ecd6430
+##O=-                   ##O=-                                       3.3%                    5.6%#                  11.4%##                 15.3%###                18.6%###                21.7%###                22.2%####               24.7%####               28.0%#####              30.9%#####              33.6%#####              34.5%######             37.3%######             40.7%#######            44.5%########           48.6%########           50.1%#########          54.0%#########          58.8%##########         62.3%###########        64.8%###########        65.8%###########        68.4%############       71.2%############       73.9%#############      76.9%#############      77.9%#############      81.1%##############     85.0%###############    89.4%###############    93.0%###############    93.9%################   96.4%################# 100.0%
+==> Pouring portable-ruby-4.0.1.arm64_big_sur.bottle.tar.gz
+==> Auto-updated Homebrew!
+Updated 3 taps (stripe/stripe-cli, homebrew/core and homebrew/cask).
+==> New Formulae
+apkeep: Command-line tool for downloading APK files from various sources
+atuin-server: Sync server for atuin - Improved shell history for zsh, bash, fish and nushell
+buildkitd: Concurrent, cache-efficient, and Dockerfile-agnostic builder toolkit (Daemon)
+checkpwn: Check Have I Been Pwned and see if it's time for you to change passwords
+cloudflare-speed-cli: Cloudflare-based speed test with optional TUI
+cni-plugins: Container Network Interface plugins
+containerd: Open and reliable container runtime
+dlpack: Common in-memory tensor structure
+docker-engine: Pack, ship and run any application as a lightweight container (Daemon)
+ffc.h: Single-header C99 accelerated float/double parsing
+flowrs: TUI application for Apache Airflow
+garden: Grow and cultivate collections of Git trees
+git-pkgs: Track package dependencies across git history
+gittype: CLI code-typing game that turns your source code into typing challenges
+googleworkspace-cli: CLI for Drive, Gmail, Calendar, Sheets, Docs, Chat, Admin, and more
+ipapatch: CLI tool to patch iOS IPA files and their plugins
+kubectl-tree: Kubectl plugin to browse Kubernetes object hierarchies as a tree
+landrun: Lightweight, secure sandbox for running Linux processes using Landlock LSM
+lua@5.4: Powerful, lightweight programming language
+mkbrr: Is a tool to create, modify and inspect torrent files. Fast
+models: Fast TUI and CLI for browsing AI models, benchmarks, and coding agents
+nfd2nfc: Convert filesystem entry names from NFD to NFC for cross-platform compatibility
+nono: Capability-based sandbox shell for AI agents with OS-enforced isolation
+openspec: Spec-driven development (SDD) for AI coding assistants
+pet: Simple command-line snippet manager
+powershell: Command-line shell and scripting language
+rustypaste-cli: CLI tool for rustypaste
+scala-cli: Scala language runner and build tool
+sem-cli: Semantic version control CLI with entity-level diffs and blame
+skills: Open agent skills ecosystem
+spicedb: Open Source, Google Zanzibar-inspired database
+termframe: Terminal output SVG screenshot tool
+termusic: Music Player TUI written in Rust
+topicctl: Declarative Kafka topic management
+torf-cli: CLI tool for creating, reading and editing torrent files
+tsshd: UDP SSH server for trzsz-ssh (tssh) with roaming support
+upterm: Instant terminal sharing
+vapoursynth-bestsource: Audio/video source and FFmpeg wrapper
+vapoursynth-bm3d: BM3D denoising filter for VapourSynth
+vapoursynth-descale: VapourSynth plugin to undo upscaling
+vuls: Agentless Vulnerability Scanner for Linux/FreeBSD
+weave: Entity-level semantic merge driver for Git using tree-sitter
+x-cli: Command-line power tool for Twitter
+zsign: Cross-platform codesigning tool for iOS apps
+zvbi: Vertical Blanking Interval (VBI) decoding library
+zxc: High-performance asymmetric lossless compression library
+
+You have 52 outdated formulae installed.
+
+==> Fetching downloads for: cmake
+✔︎ Bottle Manifest cmake (4.2.3)
+✔︎ Bottle cmake (4.2.3)
+==> Pouring cmake--4.2.3.arm64_tahoe.bottle.tar.gz
+==> Caveats
+To install the CMake documentation, run:
+  brew install cmake-docs
+==> Summary
+🍺  /opt/homebrew/Cellar/cmake/4.2.3: 4,016 files, 63.3MB
+==> Running `brew cleanup cmake`...
+Disable this behaviour by setting `HOMEBREW_NO_INSTALL_CLEANUP=1`.
+Hide these hints with `HOMEBREW_NO_ENV_HINTS=1` (see `man brew`).
+==> Caveats
+Emacs Lisp files have been installed to:
+  /opt/homebrew/share/emacs/site-lisp/cmake
+[INFO] Installed: cmake
+[INFO] Command already available: unzip
+[INFO] Command already available: curl
+[INFO] Command already available: git
+[INFO] Brew formula already installed: openssl@3
+[INFO] Mode: Release
+[INFO] No CPU optimization flag provided.
+./install.sh: line 275: cmake_args[*]: unbound variable

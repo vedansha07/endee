@@ -1,78 +1,180 @@
 # Semantic Resume Search using Endee Vector Database
 
+## Project Overview
+
+This project implements a **Semantic Resume Search Engine** using the **Endee Vector Database**.
+
+Traditional resume filtering systems rely on keyword matching, which fails when different words express similar concepts. For example, a job description asking for *“Python backend engineer”* may fail to match a resume that describes *“Django developer”* even though both represent the same skill set.
+
+This system solves that problem by converting resumes and job descriptions into **vector embeddings** and performing **semantic similarity search** using Endee.
+
+The result is a system that retrieves the most contextually relevant resumes for a given job description.
+
+---
+
 ## Problem Statement
 
-Recruiters manually review hundreds of resumes. Keyword-based search fails because it cannot understand semantic meaning.
+Recruiters often need to review hundreds of resumes to find suitable candidates for a job role. Keyword-based filtering is unreliable because it does not capture semantic meaning.
 
-**Example**:
-- **Job description**: "React developer with ML experience"
-- **Resume text**: "Built frontend apps using Next.js and trained neural networks."
+Example:
 
-Keyword search fails, but semantic search succeeds because it understands the intrinsic meaning.
+Job Description
 
-## Solution
+```
+Looking for a React developer with machine learning experience.
+```
 
-This project builds a semantic search system that converts resumes into vector embeddings and stores them inside the Endee vector database. 
+Resume Text
 
-Recruiter queries are embedded and compared against stored resume embeddings to retrieve the most relevant candidates quickly and accurately.
+```
+Developed frontend interfaces using Next.js and trained neural network models for recommendation systems.
+```
+
+Keyword matching may fail here, but **semantic embeddings recognize the similarity between these concepts.**
+
+This project demonstrates how **vector search can improve candidate matching**.
+
+---
 
 ## System Architecture
 
-**PDF Resume → Extract Text → Embedding → Endee Vector DB → Semantic Search → Ranked Results**
+```
+PDF Resume Upload
+        ↓
+Text Extraction (pdfplumber)
+        ↓
+Embedding Generation (Sentence Transformers)
+        ↓
+Endee Vector Database
+        ↓
+Semantic Similarity Search
+        ↓
+Top Matching Candidate Resumes
+```
 
-1. Uploaded PDF resumes are textually parsed to extract meaningful data.
-2. The parsed text is embedded mathematically using a dense embedding model (`sentence-transformers`).
-3. These vector embeddings are stored inside the `Endee Vector Database` mapped to text metadata.
-4. User queries are similarly embedded and retrieved via semantic similarity search.
+---
 
-## Tech Stack
+## Technology Stack
 
-- **Python**
-- **FastAPI**
-- **Sentence Transformers**
-- **Endee Vector Database**
-- **pdfplumber**
+**Embedding Model**
+
+* Sentence Transformers
+* Model: `all-MiniLM-L6-v2`
+
+**Vector Database**
+
+* Endee Vector Database
+* Stores resume embeddings and performs similarity search
+
+**Backend**
+
+* FastAPI
+* Uvicorn server
+
+**Data Processing**
+
+* pdfplumber for extracting text from resumes
+
+**Frontend**
+
+* HTML
+* CSS
+* JavaScript (Fetch API)
+
+---
+
+## How Endee is Used
+
+Endee serves as the **vector storage and retrieval engine** for the application.
+
+Workflow:
+
+1. Resume text is extracted from uploaded PDFs.
+2. The text is converted into a **384-dimensional embedding** using the Sentence Transformers model.
+3. The embedding is stored in the **Endee vector database** along with metadata containing the original resume text.
+4. When a user enters a job description, the system generates an embedding for the query.
+5. Endee performs **cosine similarity search** to find the most relevant resumes.
+6. The top results are returned with similarity scores.
+
+---
+
+## Project Workflow
+
+### Resume Upload
+
+1. User uploads a PDF resume.
+2. Backend extracts text using `pdfplumber`.
+3. The text is converted into an embedding.
+4. The embedding and metadata are stored in Endee.
+
+### Semantic Search
+
+1. User enters a job description.
+2. The description is converted into an embedding.
+3. Endee searches the vector database.
+4. The system returns the most similar resumes ranked by similarity score.
+
+---
+
+## Example Query
+
+Query:
+
+```
+Looking for a Python machine learning engineer with frontend experience
+```
+
+Example Results:
+
+```
+1. John Doe — Similarity Score: 0.92
+2. Alice Smith — Similarity Score: 0.88
+3. David Brown — Similarity Score: 0.84
+```
+
+---
 
 ## Setup Instructions
 
-### 1. Clone the Repository
-```bash
+### Clone the Repository
+
+```
 git clone https://github.com/vedansha07/endee.git
 cd endee/resume-semantic-search
 ```
 
-### 2. Create a Virtual Environment and Install Dependencies
-```bash
-python -m venv venv
-source venv/bin/activate  # Windows: venv\\Scripts\\activate
+### Install Dependencies
+
+```
 pip install -r requirements.txt
 ```
 
-### 3. Run the API Server
-```bash
-cd backend
-uvicorn main:app --reload
+### Run the Server
+
 ```
-The server will run at `http://127.0.0.1:8000`. You can access the Swagger documentation at `http://127.0.0.1:8000/docs`.
-
-## Example Query
-
-Once the application is running, you can ingest resumes via the `POST /upload` endpoint and search using `POST /search`.
-
-**Upload Example:**
-Use `multipart/form-data` to submit the file.
-```bash
-curl -X POST "http://127.0.0.1:8000/upload" \
-  -F "resume_id=resume1" \
-  -F "file=@sample_resumes/resume1.pdf"
+uvicorn backend.main:app --reload
 ```
 
-**Search Example:**
-```json
-{
-  "job_description": "Looking for Python machine learning engineer with frontend experience"
-}
+API documentation will be available at:
+
+```
+http://127.0.0.1:8000/docs
 ```
 
-**Search Result:**
-The system returns resumes ranked by semantic similarity based on their vector embeddings from the Endee vector database.
+---
+
+## Limitations
+
+Currently the vector database runs during the FastAPI session.
+If the server restarts, resumes must be re-uploaded.
+
+In a production environment, the Endee database would be configured with persistent storage to retain embeddings across restarts.
+
+---
+
+## Future Improvements
+
+* Resume skill extraction using NLP
+* Hybrid search (keyword + vector search)
+* Candidate recommendation system
+* Retrieval-Augmented Generation (RAG) for automatic candidate summaries

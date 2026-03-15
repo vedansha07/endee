@@ -1,0 +1,10 @@
+Alice Smith
+
+Skills:
+Java
+Spring Boot
+Microservices
+Docker
+
+Experience:
+Backend engineer working on scalable cloud systems.

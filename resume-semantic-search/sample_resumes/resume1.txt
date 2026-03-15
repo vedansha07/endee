@@ -1,0 +1,10 @@
+John Doe
+
+Skills:
+Python
+Machine Learning
+React
+FastAPI
+
+Experience:
+Developed AI-powered web applications and machine learning models.

@@ -2,5 +2,6 @@ fastapi
 uvicorn
 sentence-transformers
 pdfplumber
+pymupdf
 numpy
 endee

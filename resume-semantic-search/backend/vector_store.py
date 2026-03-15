@@ -32,3 +32,10 @@ def search_resumes(query_embedding: list):
             "metadata": res.get("meta", {})
         })
     return results
+
+def clear_db():
+    try:
+        client.delete_index("resumes")
+    except Exception as e:
+        print(f"Error clearing db: {e}")
+        pass

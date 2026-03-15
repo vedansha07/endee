@@ -532,3 +532,490 @@
 -- Check size of id_t
 -- Check size of id_t - done
 -- Check size of mode_t
+-- Check size of mode_t - done
+-- Check size of off_t
+-- Check size of off_t - done
+-- Check size of size_t
+-- Check size of size_t - done
+-- Check size of ssize_t
+-- Check size of ssize_t - done
+-- Check size of uid_t
+-- Check size of uid_t - done
+-- Check size of pid_t
+-- Check size of pid_t - done
+-- Check size of intptr_t
+-- Check size of intptr_t - done
+-- Check size of uintptr_t
+-- Check size of uintptr_t - done
+-- Check size of wchar_t
+-- Check size of wchar_t - done
+-- Checking _FILE_OFFSET_BITS for large files
+-- Checking _FILE_OFFSET_BITS for large files - not needed
+-- Looking for setxattr in attr
+-- Looking for setxattr in attr - not found
+-- Looking for setxattr in gnu
+-- Looking for setxattr in gnu - not found
+-- Looking for EXTATTR_NAMESPACE_USER
+-- Looking for EXTATTR_NAMESPACE_USER - not found
+-- Looking for XATTR_NOFOLLOW
+-- Looking for XATTR_NOFOLLOW - found
+-- Looking for fgetxattr
+-- Looking for fgetxattr - found
+-- Looking for flistxattr
+-- Looking for flistxattr - found
+-- Looking for fsetxattr
+-- Looking for fsetxattr - found
+-- Looking for getxattr
+-- Looking for getxattr - found
+-- Looking for listxattr
+-- Looking for listxattr - found
+-- Looking for setxattr
+-- Looking for setxattr - found
+-- Extended attributes support: Darwin
+-- Looking for acl
+-- Looking for acl - not found
+-- Looking for facl
+-- Looking for facl - not found
+-- Looking for acl_get_file in acl
+-- Looking for acl_get_file in acl - not found
+-- Performing Test HAVE_ACL_T
+-- Performing Test HAVE_ACL_T - Success
+-- Performing Test HAVE_ACL_ENTRY_T
+-- Performing Test HAVE_ACL_ENTRY_T - Success
+-- Performing Test HAVE_ACL_PERMSET_T
+-- Performing Test HAVE_ACL_PERMSET_T - Success
+-- Performing Test HAVE_ACL_TAG_T
+-- Performing Test HAVE_ACL_TAG_T - Success
+-- Looking for acl_add_perm
+-- Looking for acl_add_perm - found
+-- Looking for acl_clear_perms
+-- Looking for acl_clear_perms - found
+-- Looking for acl_create_entry
+-- Looking for acl_create_entry - found
+-- Looking for acl_delete_def_file
+-- Looking for acl_delete_def_file - found
+-- Looking for acl_free
+-- Looking for acl_free - found
+-- Looking for acl_get_entry
+-- Looking for acl_get_entry - found
+-- Looking for acl_get_fd
+-- Looking for acl_get_fd - found
+-- Looking for acl_get_file
+-- Looking for acl_get_file - found
+-- Looking for acl_get_permset
+-- Looking for acl_get_permset - found
+-- Looking for acl_get_qualifier
+-- Looking for acl_get_qualifier - found
+-- Looking for acl_get_tag_type
+-- Looking for acl_get_tag_type - found
+-- Looking for acl_init
+-- Looking for acl_init - found
+-- Looking for acl_set_fd
+-- Looking for acl_set_fd - found
+-- Looking for acl_set_file
+-- Looking for acl_set_file - found
+-- Looking for acl_set_qualifier
+-- Looking for acl_set_qualifier - found
+-- Looking for acl_set_tag_type
+-- Looking for acl_set_tag_type - found
+-- Looking for acl_get_perm
+-- Looking for acl_get_perm - not found
+-- Looking for acl_add_flag_np
+-- Looking for acl_add_flag_np - found
+-- Looking for acl_clear_flags_np
+-- Looking for acl_clear_flags_np - found
+-- Looking for acl_get_brand_np
+-- Looking for acl_get_brand_np - not found
+-- Looking for acl_get_entry_type_np
+-- Looking for acl_get_entry_type_np - not found
+-- Looking for acl_get_flag_np
+-- Looking for acl_get_flag_np - found
+-- Looking for acl_get_flagset_np
+-- Looking for acl_get_flagset_np - found
+-- Looking for acl_get_fd_np
+-- Looking for acl_get_fd_np - found
+-- Looking for acl_get_link_np
+-- Looking for acl_get_link_np - found
+-- Looking for acl_get_perm_np
+-- Looking for acl_get_perm_np - found
+-- Looking for acl_is_trivial_np
+-- Looking for acl_is_trivial_np - not found
+-- Looking for acl_set_entry_type_np
+-- Looking for acl_set_entry_type_np - not found
+-- Looking for acl_set_fd_np
+-- Looking for acl_set_fd_np - found
+-- Looking for acl_set_link_np
+-- Looking for acl_set_link_np - found
+-- Looking for mbr_gid_to_uuid
+-- Looking for mbr_gid_to_uuid - found
+-- Looking for mbr_uid_to_uuid
+-- Looking for mbr_uid_to_uuid - found
+-- Looking for mbr_uuid_to_id
+-- Looking for mbr_uuid_to_id - found
+-- Performing Test HAVE_DECL_ACL_TYPE_EXTENDED
+-- Performing Test HAVE_DECL_ACL_TYPE_EXTENDED - Success
+-- Performing Test HAVE_DECL_ACL_SYNCHRONIZE
+-- Performing Test HAVE_DECL_ACL_SYNCHRONIZE - Success
+-- Looking for ACL_TYPE_NFS4
+-- Looking for ACL_TYPE_NFS4 - not found
+-- Looking for ACL_USER
+-- Looking for ACL_USER - not found
+-- Looking for richacl_get_file in richacl
+-- Looking for richacl_get_file in richacl - not found
+-- Performing Test HAVE_STRUCT_RICHACE
+-- Performing Test HAVE_STRUCT_RICHACE - Failed
+-- Performing Test HAVE_STRUCT_RICHACL
+-- Performing Test HAVE_STRUCT_RICHACL - Failed
+-- ACL support: Darwin (limited NFSv4)
+-- Checking support for ARCHIVE_CRYPTO_MD5_LIBC
+-- Checking support for ARCHIVE_CRYPTO_MD5_LIBC -- not found
+-- Checking support for ARCHIVE_CRYPTO_RMD160_LIBC
+-- Checking support for ARCHIVE_CRYPTO_RMD160_LIBC -- not found
+-- Checking support for ARCHIVE_CRYPTO_SHA1_LIBC
+-- Checking support for ARCHIVE_CRYPTO_SHA1_LIBC -- not found
+-- Checking support for ARCHIVE_CRYPTO_SHA256_LIBC
+-- Checking support for ARCHIVE_CRYPTO_SHA256_LIBC -- not found
+-- Checking support for ARCHIVE_CRYPTO_SHA384_LIBC
+-- Checking support for ARCHIVE_CRYPTO_SHA384_LIBC -- not found
+-- Checking support for ARCHIVE_CRYPTO_SHA512_LIBC
+-- Checking support for ARCHIVE_CRYPTO_SHA512_LIBC -- not found
+-- Checking support for ARCHIVE_CRYPTO_SHA256_LIBC2
+-- Checking support for ARCHIVE_CRYPTO_SHA256_LIBC2 -- not found
+-- Checking support for ARCHIVE_CRYPTO_SHA384_LIBC2
+-- Checking support for ARCHIVE_CRYPTO_SHA384_LIBC2 -- not found
+-- Checking support for ARCHIVE_CRYPTO_SHA512_LIBC2
+-- Checking support for ARCHIVE_CRYPTO_SHA512_LIBC2 -- not found
+-- Checking support for ARCHIVE_CRYPTO_SHA256_LIBC3
+-- Checking support for ARCHIVE_CRYPTO_SHA256_LIBC3 -- not found
+-- Checking support for ARCHIVE_CRYPTO_SHA384_LIBC3
+-- Checking support for ARCHIVE_CRYPTO_SHA384_LIBC3 -- not found
+-- Checking support for ARCHIVE_CRYPTO_SHA512_LIBC3
+-- Checking support for ARCHIVE_CRYPTO_SHA512_LIBC3 -- not found
+-- Checking support for ARCHIVE_CRYPTO_MD5_LIBSYSTEM
+-- Checking support for ARCHIVE_CRYPTO_MD5_LIBSYSTEM -- found
+-- Checking support for ARCHIVE_CRYPTO_SHA1_LIBSYSTEM
+-- Checking support for ARCHIVE_CRYPTO_SHA1_LIBSYSTEM -- found
+-- Checking support for ARCHIVE_CRYPTO_SHA256_LIBSYSTEM
+-- Checking support for ARCHIVE_CRYPTO_SHA256_LIBSYSTEM -- found
+-- Checking support for ARCHIVE_CRYPTO_SHA384_LIBSYSTEM
+-- Checking support for ARCHIVE_CRYPTO_SHA384_LIBSYSTEM -- found
+-- Checking support for ARCHIVE_CRYPTO_SHA512_LIBSYSTEM
+-- Checking support for ARCHIVE_CRYPTO_SHA512_LIBSYSTEM -- found
+-- Checking support for ARCHIVE_CRYPTO_RMD160_LIBMD
+-- Checking support for ARCHIVE_CRYPTO_RMD160_LIBMD -- not found
+-- Performing Test HAVE_VISIBILITY_ATTR
+-- Performing Test HAVE_VISIBILITY_ATTR - Success
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Binary name: ndd-neon-darwin
+-- SIMD: NEON enabled
+-- Processor: arm64
+-- SIMD Mode: NEON
+-- ASIO include dir: /Users/vedanshasrivastava/Desktop/Endee_Assignment/endee/third_party/asio/asio/include
+-- LMDB include dir: /Users/vedanshasrivastava/Desktop/Endee_Assignment/endee/third_party/mdbx
+-- OpenSSL include dir: /opt/homebrew/Cellar/openssl@3/3.6.1/include
+-- Configuring done (76.6s)
+-- Generating done (1.8s)
+-- Build files have been written to: /Users/vedanshasrivastava/Desktop/Endee_Assignment/endee/build
+[INFO] Running make -j8
+[  1%] Building CXX object CMakeFiles/ndd_core.dir/src/sparse/inverted_index.cpp.o
+[  2%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_cmdline.c.o
+[  2%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_cryptor.c.o
+[  2%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_check_magic.c.o
+[  2%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_acl.c.o
+[  2%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_check_magic.c.o
+[  3%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_acl.c.o
+[  4%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_cmdline.c.o
+[  4%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_entry_copy_stat.c.o
+[  4%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_cryptor.c.o
+[  4%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_digest.c.o
+[  4%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_digest.c.o
+[  5%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_entry.c.o
+[  5%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_entry_link_resolver.c.o
+[  6%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_entry_sparse.c.o
+[  7%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_entry.c.o
+[  7%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_entry_stat.c.o
+[  7%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_entry_copy_stat.c.o
+[  8%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_entry_strmode.c.o
+[  8%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_entry_xattr.c.o
+[  8%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_hmac.c.o
+[  8%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_entry_sparse.c.o
+[  9%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_entry_link_resolver.c.o
+[ 10%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_match.c.o
+[ 10%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_options.c.o
+[ 11%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_pack_dev.c.o
+[ 11%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_entry_stat.c.o
+[ 12%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_entry_strmode.c.o
+[ 12%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_parse_date.c.o
+[ 12%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_pathmatch.c.o
+[ 13%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_ppmd8.c.o
+[ 13%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_entry_xattr.c.o
+[ 13%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_ppmd7.c.o
+[ 13%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_hmac.c.o
+[ 13%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_random.c.o
+[ 14%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_match.c.o
+[ 15%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_rb.c.o
+[ 15%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_options.c.o
+[ 15%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_read.c.o
+[ 16%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_pack_dev.c.o
+[ 16%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_parse_date.c.o
+[ 17%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_read_add_passphrase.c.o
+[ 17%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_pathmatch.c.o
+[ 18%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_ppmd8.c.o
+[ 18%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_ppmd7.c.o
+[ 19%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_random.c.o
+[ 19%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_read_append_filter.c.o
+[ 19%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_read_data_into_fd.c.o
+[ 19%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_rb.c.o
+[ 20%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_read_disk_entry_from_file.c.o
+[ 20%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_read.c.o
+[ 20%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_read_disk_posix.c.o
+[ 21%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_read_disk_set_standard_lookup.c.o
+[ 22%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_read_add_passphrase.c.o
+[ 22%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_read_extract.c.o
+[ 22%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_read_extract2.c.o
+[ 22%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_read_append_filter.c.o
+[ 23%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_read_open_fd.c.o
+[ 23%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_read_data_into_fd.c.o
+[ 24%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_read_disk_entry_from_file.c.o
+[ 24%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_read_open_file.c.o
+[ 24%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_read_disk_posix.c.o
+[ 25%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_read_disk_set_standard_lookup.c.o
+[ 26%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_read_open_memory.c.o
+[ 26%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_read_extract.c.o
+[ 26%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_read_open_filename.c.o
+[ 26%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_read_extract2.c.o
+[ 26%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_read_set_format.c.o
+[ 27%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_read_set_options.c.o
+[ 28%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_read_open_fd.c.o
+[ 28%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_read_open_file.c.o
+[ 28%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_read_support_filter_all.c.o
+[ 29%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_read_open_filename.c.o
+[ 29%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_read_support_filter_by_code.c.o
+[ 29%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_read_open_memory.c.o
+[ 29%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_read_support_filter_compress.c.o
+[ 30%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_read_support_filter_bzip2.c.o
+[ 30%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_read_support_filter_gzip.c.o
+[ 30%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_read_set_format.c.o
+[ 31%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_read_set_options.c.o
+[ 32%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_read_support_filter_grzip.c.o
+[ 32%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_read_support_filter_all.c.o
+[ 32%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_read_support_filter_lrzip.c.o
+[ 33%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_read_support_filter_lz4.c.o
+[ 33%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_read_support_filter_lzop.c.o
+[ 33%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_read_support_filter_by_code.c.o
+[ 33%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_read_support_filter_none.c.o
+[ 34%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_read_support_filter_program.c.o
+[ 34%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_read_support_filter_rpm.c.o
+[ 35%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_read_support_filter_bzip2.c.o
+[ 36%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_read_support_filter_uu.c.o
+[ 36%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_read_support_filter_xz.c.o
+[ 36%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_read_support_filter_zstd.c.o
+[ 37%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_read_support_format_7zip.c.o
+[ 37%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_read_support_format_all.c.o
+[ 37%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_read_support_filter_compress.c.o
+[ 37%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_read_support_format_ar.c.o
+[ 38%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_read_support_format_by_code.c.o
+[ 38%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_read_support_format_cab.c.o
+[ 39%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_read_support_format_cpio.c.o
+[ 39%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_read_support_format_empty.c.o
+[ 40%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_read_support_filter_gzip.c.o
+[ 40%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_read_support_format_iso9660.c.o
+[ 40%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_read_support_format_mtree.c.o
+[ 41%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_read_support_format_lha.c.o
+[ 41%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_read_support_filter_grzip.c.o
+[ 41%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_read_support_filter_lrzip.c.o
+[ 42%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_read_support_filter_lz4.c.o
+[ 43%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_read_support_format_rar.c.o
+[ 43%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_read_support_format_rar5.c.o
+[ 43%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_read_support_format_raw.c.o
+[ 43%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_read_support_filter_lzop.c.o
+[ 44%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_read_support_format_tar.c.o
+[ 45%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_read_support_filter_none.c.o
+[ 45%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_read_support_format_warc.c.o
+[ 45%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_read_support_format_xar.c.o
+[ 45%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_read_support_filter_program.c.o
+[ 45%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_read_support_filter_rpm.c.o
+[ 46%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_read_support_format_zip.c.o
+[ 47%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_read_support_filter_uu.c.o
+[ 47%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_string.c.o
+/Users/vedanshasrivastava/Desktop/Endee_Assignment/endee/build/_deps/libarchive-src/libarchive/archive_string.c:2112:29: warning: passing 'const char **' to parameter of type 'char **' discards qualifiers in nested pointer types [-Wincompatible-pointer-types-discards-qualifiers]
+ 2112 |                 size_t result = iconv(cd, &itp, &remaining, &outp, &avail);
+      |                                           ^~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/iconv.h:71:41: note: passing argument to parameter here
+   71 | size_t  iconv(iconv_t, char ** __restrict,
+      |                                          ^
+[ 47%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_read_support_filter_xz.c.o
+[ 48%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_string_sprintf.c.o
+[ 48%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_read_support_filter_zstd.c.o
+[ 48%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_time.c.o
+[ 48%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_util.c.o
+[ 49%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_read_support_format_7zip.c.o
+[ 50%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_version_details.c.o
+[ 50%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_read_support_format_all.c.o
+[ 50%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_virtual.c.o
+[ 51%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_read_support_format_ar.c.o
+[ 52%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_write.c.o
+[ 52%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_read_support_format_by_code.c.o
+[ 52%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_write_disk_posix.c.o
+[ 52%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_write_disk_set_standard_lookup.c.o
+[ 52%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_read_support_format_cab.c.o
+[ 53%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_write_open_fd.c.o
+[ 54%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_read_support_format_cpio.c.o
+[ 54%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_write_open_file.c.o
+1 warning generated.
+[ 54%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_write_open_filename.c.o
+[ 55%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_write_open_memory.c.o
+[ 55%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_write_add_filter.c.o
+[ 56%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_write_add_filter_b64encode.c.o
+[ 56%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_write_add_filter_bzip2.c.o
+[ 56%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_write_add_filter_by_name.c.o
+[ 57%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_write_add_filter_compress.c.o
+[ 57%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_write_add_filter_grzip.c.o
+[ 57%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_read_support_format_empty.c.o
+[ 57%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_write_add_filter_gzip.c.o
+[ 58%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_write_add_filter_lrzip.c.o
+[ 58%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_read_support_format_iso9660.c.o
+[ 58%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_write_add_filter_lz4.c.o
+[ 59%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_write_add_filter_lzop.c.o
+[ 60%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_read_support_format_lha.c.o
+[ 60%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_write_add_filter_none.c.o
+[ 60%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_write_add_filter_program.c.o
+[ 60%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_read_support_format_mtree.c.o
+[ 61%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_write_add_filter_uuencode.c.o
+[ 62%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_read_support_format_rar.c.o
+[ 62%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_write_add_filter_xz.c.o
+[ 62%] Built target ndd_core
+[ 62%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_read_support_format_rar5.c.o
+[ 63%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_write_add_filter_zstd.c.o
+[ 63%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_write_set_format.c.o
+[ 63%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_write_set_format_7zip.c.o
+[ 64%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_write_set_format_ar.c.o
+[ 64%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_read_support_format_raw.c.o
+[ 65%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_read_support_format_tar.c.o
+[ 65%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_write_set_format_by_name.c.o
+[ 65%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_read_support_format_warc.c.o
+[ 65%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_write_set_format_cpio.c.o
+[ 66%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_read_support_format_xar.c.o
+[ 67%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_write_set_format_cpio_binary.c.o
+[ 67%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_write_set_format_cpio_newc.c.o
+[ 68%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_write_set_format_cpio_odc.c.o
+[ 68%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_write_set_format_filter_by_ext.c.o
+[ 68%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_write_set_format_gnutar.c.o
+[ 68%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_read_support_format_zip.c.o
+[ 69%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_write_set_format_iso9660.c.o
+[ 69%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_write_set_format_mtree.c.o
+[ 70%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_write_set_format_pax.c.o
+[ 70%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_string.c.o
+[ 71%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_string_sprintf.c.o
+[ 71%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_write_set_format_raw.c.o
+[ 71%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_time.c.o
+/Users/vedanshasrivastava/Desktop/Endee_Assignment/endee/build/_deps/libarchive-src/libarchive/archive_string.c:2112:29: warning: passing 'const char **' to parameter of type 'char **' discards qualifiers in nested pointer types [-Wincompatible-pointer-types-discards-qualifiers]
+ 2112 |                 size_t result = iconv(cd, &itp, &remaining, &outp, &avail);
+      |                                           ^~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/iconv.h:71:41: note: passing argument to parameter here
+   71 | size_t  iconv(iconv_t, char ** __restrict,
+      |                                          ^
+[ 71%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_util.c.o
+[ 71%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_write_set_format_shar.c.o
+[ 72%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_version_details.c.o
+[ 73%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_write_set_format_ustar.c.o
+[ 73%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_virtual.c.o
+[ 73%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_write_set_format_v7tar.c.o
+[ 74%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_write.c.o
+[ 74%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_write_disk_posix.c.o
+[ 74%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_write_set_format_warc.c.o
+[ 74%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_write_disk_set_standard_lookup.c.o
+[ 75%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_write_open_fd.c.o
+[ 75%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_write_set_format_zip.c.o
+[ 76%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_write_set_format_xar.c.o
+[ 77%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_write_set_options.c.o
+[ 77%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_write_open_file.c.o
+[ 78%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_write_open_filename.c.o
+[ 78%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_write_open_memory.c.o
+[ 78%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_write_set_passphrase.c.o
+1 warning generated.
+[ 78%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_write_add_filter.c.o
+[ 79%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_write_add_filter_b64encode.c.o
+[ 79%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_write_add_filter_by_name.c.o
+[ 79%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_write_add_filter_bzip2.c.o
+[ 79%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/filter_fork_posix.c.o
+[ 80%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_write_add_filter_compress.c.o
+[ 81%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/xxhash.c.o
+[ 81%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_write_add_filter_grzip.c.o
+[ 82%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_write_add_filter_gzip.c.o
+[ 82%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_blake2sp_ref.c.o
+[ 82%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_write_add_filter_lrzip.c.o
+[ 83%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_blake2s_ref.c.o
+[ 83%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_write_add_filter_lz4.c.o
+[ 84%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_write_add_filter_lzop.c.o
+[ 84%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive_static.dir/archive_disk_acl_darwin.c.o
+[ 84%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_write_add_filter_none.c.o
+[ 85%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_write_add_filter_program.c.o
+[ 85%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_write_add_filter_uuencode.c.o
+[ 85%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_write_add_filter_xz.c.o
+[ 85%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_write_set_format.c.o
+[ 86%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_write_add_filter_zstd.c.o
+[ 86%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_write_set_format_7zip.c.o
+[ 86%] Linking C static library libarchive.a
+[ 87%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_write_set_format_ar.c.o
+[ 87%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_write_set_format_by_name.c.o
+[ 88%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_write_set_format_cpio.c.o
+[ 88%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_write_set_format_cpio_binary.c.o
+[ 88%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_write_set_format_cpio_newc.c.o
+[ 89%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_write_set_format_cpio_odc.c.o
+[ 89%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_write_set_format_filter_by_ext.c.o
+[ 89%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_write_set_format_gnutar.c.o
+[ 90%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_write_set_format_iso9660.c.o
+[ 90%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_write_set_format_mtree.c.o
+[ 91%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_write_set_format_pax.c.o
+[ 91%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_write_set_format_shar.c.o
+[ 91%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_write_set_format_raw.c.o
+[ 92%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_write_set_format_ustar.c.o
+[ 92%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_write_set_format_v7tar.c.o
+[ 93%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_write_set_format_warc.c.o
+[ 93%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_write_set_format_xar.c.o
+[ 93%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_write_set_format_zip.c.o
+[ 94%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_write_set_options.c.o
+[ 94%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_write_set_passphrase.c.o
+[ 94%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/filter_fork_posix.c.o
+[ 95%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/xxhash.c.o
+[ 95%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_blake2sp_ref.c.o
+[ 96%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_blake2s_ref.c.o
+[ 96%] Building C object _deps/libarchive-build/libarchive/CMakeFiles/archive.dir/archive_disk_acl_darwin.c.o
+[ 96%] Linking C shared library libarchive.dylib
+[ 96%] Built target archive
+[ 96%] Built target archive_static
+[ 97%] Building C object _deps/libarchive-build/unzip/CMakeFiles/bsdunzip.dir/bsdunzip.c.o
+[ 98%] Building C object CMakeFiles/ndd-neon-darwin.dir/third_party/roaring_bitmap/roaring.c.o
+[ 98%] Building C object CMakeFiles/ndd-neon-darwin.dir/third_party/mdbx/mdbx.c.o
+[ 98%] Building CXX object CMakeFiles/ndd-neon-darwin.dir/src/main.cpp.o
+[ 99%] Building C object _deps/libarchive-build/unzip/CMakeFiles/bsdunzip.dir/__/libarchive_fe/lafe_err.c.o
+[ 99%] Building C object _deps/libarchive-build/unzip/CMakeFiles/bsdunzip.dir/cmdline.c.o
+[ 99%] Building C object _deps/libarchive-build/unzip/CMakeFiles/bsdunzip.dir/la_getline.c.o
+[ 99%] Building C object _deps/libarchive-build/unzip/CMakeFiles/bsdunzip.dir/__/libarchive_fe/passphrase.c.o
+[100%] Linking C executable ../bin/bsdunzip
+[100%] Built target bsdunzip
+[100%] Linking CXX executable ndd-neon-darwin
+Creating softlink 'ndd' -> ndd-neon-darwin
+[100%] Built target ndd-neon-darwin
+[INFO] Build finished successfully.
+[INFO] Pulling frontend version v1.2.0
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100  366k  100  366k    0     0   414k      0 --:--:-- --:--:-- --:--:--  414k
+Archive:  react-dist.zip
+   creating: dist
+   creating: dist/assets
+  inflating: dist/assets/index-BUpM9y9c.js  
+  inflating: dist/assets/index-2iWvw3h1.css  
+  inflating: dist/index.html         
+  inflating: dist/endee-logo.svg     
+[INFO] Frontend version v1.2.0 added
+[INFO] 
+[INFO] Build and installation successful!
+[INFO] You can now start the server by running:
+[INFO]   ./run.sh

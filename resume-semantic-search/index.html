@@ -283,6 +283,17 @@
                 <div id="resultsList"></div>
             </div>
         </div>
+
+        <!-- Danger Zone Section -->
+        <div class="card" style="border-color: #F87171;">
+            <h2 style="color: #DC2626;">⚠️ Danger Zone</h2>
+            <p style="margin-bottom: 1.5rem; color: var(--text-muted);">This action will permanently delete all resumes and embeddings from the vector database. This cannot be undone.</p>
+            <button type="button" id="clearDbBtn" style="background-color: #DC2626;">
+                <span class="loader" id="clearLoader"></span>
+                Clear Database
+            </button>
+            <div id="clearFeedback" class="feedback"></div>
+        </div>
     </div>
 
     <script>
@@ -318,12 +329,14 @@
                     body: formData
                 });
 
-                if (!response.ok) throw new Error('Failed to upload resume');
+                if (!response.ok) throw new Error('Failed to upload resume (Status ' + response.status + ')');
                 
                 feedback.textContent = '✅ Resume successfully stored and embedded in Endee!';
                 feedback.className = 'feedback success';
                 document.getElementById('uploadForm').reset();
             } catch (err) {
+                console.error("Upload error details:", err);
+                alert("Upload Error: " + err.message + "\nCheck browser console for details.");
                 feedback.textContent = `❌ Error: ${err.message}`;
                 feedback.className = 'feedback error';
             } finally {
@@ -433,6 +446,43 @@
                 btn.textContent = 'Read More';
             }
         };
+
+        // Clear DB Logic
+        document.getElementById('clearDbBtn').addEventListener('click', async () => {
+            if (!confirm("Are you sure you want to permanently clear the database? This cannot be undone.")) {
+                return;
+            }
+
+            const btn = document.getElementById('clearDbBtn');
+            const loader = document.getElementById('clearLoader');
+            const feedback = document.getElementById('clearFeedback');
+
+            btn.disabled = true;
+            loader.style.display = 'inline-block';
+            feedback.className = 'feedback';
+
+            try {
+                const response = await fetch(`${API_URL}/clear`, {
+                    method: 'DELETE'
+                });
+
+                if (!response.ok) throw new Error('Failed to clear database (Status ' + response.status + ')');
+                
+                feedback.textContent = '✅ Database successfully cleared!';
+                feedback.className = 'feedback success';
+                
+                // Clear the UI
+                document.getElementById('resultsContainer').style.display = 'none';
+                document.getElementById('resultsList').innerHTML = '';
+            } catch (err) {
+                console.error("Clear DB error details:", err);
+                feedback.textContent = `❌ Error: ${err.message}`;
+                feedback.className = 'feedback error';
+            } finally {
+                btn.disabled = false;
+                loader.style.display = 'none';
+            }
+        });
     </script>
 </body>
 </html>

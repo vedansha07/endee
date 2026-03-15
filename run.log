@@ -1,0 +1,87 @@
+[INFO] Found binary: build/ndd-neon-darwin
+INFO_1703: -/-: NEON is supported and usable
+INFO: -/-: SERVER_ID: unknown
+INFO: -/-: SERVER_PORT: 8080
+INFO: -/-: DATA_DIR: ./data
+INFO: -/-: NUM_PARALLEL_INSERTS: 4
+INFO: -/-: NUM_RECOVERY_THREADS: 16
+INFO: -/-: MAX_MEMORY_GB: 24
+INFO: -/-: ENABLE_DEBUG_LOG: 1
+INFO: -/-: AUTH_TOKEN: 
+INFO: -/-: AUTH_ENABLED: 0
+INFO: -/-: DEFAULT_USERNAME: endee
+INFO: -/-: DEFAULT_SERVER_TYPE: OSS
+INFO: -/-: DEFAULT_DATA_DIR: /mnt/data
+INFO: -/-: DEFAULT_MAX_ACTIVE_INDICES: 64
+INFO: -/-: DEFAULT_MAX_ELEMENTS: 100000
+INFO: -/-: DEFAULT_MAX_ELEMENTS_INCREMENT: 100000
+INFO: -/-: DEFAULT_MAX_ELEMENTS_INCREMENT_TRIGGER: 50000
+INFO_1005: -/-: Starting the server
+INFO_1102: -/-: Authentication disabled; running in open mode
+INFO_1006: -/-: Created auth manager
+INFO_1007: -/-: Created index manager
+INFO_2011: -/-: Autosave thread started
+INFO_1008: -/-: Using: 16 server threads.
+(2026-03-15 16:41:23) [INFO    ] Crow/master server is running at http://0.0.0.0:8080 using 16 threads
+(2026-03-15 16:41:23) [INFO    ] Call `app.loglevel(crow::LogLevel::Warning)` to hide Info level logs.
+(2026-03-15 16:41:42) [INFO    ] Request: 127.0.0.1:62244 0x103fe7838 HTTP/1.1 GET /api/v1/index/list
+(2026-03-15 16:41:42) [INFO    ] Response: 0x103fe7838 /api/v1/index/list 200 0
+(2026-03-15 16:43:23) [INFO    ] Request: 127.0.0.1:62623 0xafb05c018 HTTP/1.1 POST /api/v1/index/create
+INFO_2021: endee/resumes: Creating ID mapper with user type Admin
+INFO_2001: endee/resumes: Creating cache entry
+INFO_2005: endee/resumes: Assigning index id
+INFO_2006: endee/resumes: Moving algorithm instance
+INFO_2007: endee/resumes: Cache entry construction completed
+INFO_2022: endee/resumes: Saving newly created index
+(2026-03-15 16:43:23) [INFO    ] Response: 0xafb05c018 /api/v1/index/create 200 0
+(2026-03-15 16:44:59) [INFO    ] Request: 127.0.0.1:63021 0xafb05d418 HTTP/1.1 POST /api/v1/index/create
+WARN_1019: endee/resumes: Create-index request failed: Index with this name already exists for this user
+(2026-03-15 16:44:59) [INFO    ] Response: 0xafb05d418 /api/v1/index/create 409 0
+(2026-03-15 16:44:59) [INFO    ] Request: 127.0.0.1:63021 0xafb05d418 HTTP/1.1 GET /api/v1/index/resumes/info
+(2026-03-15 16:44:59) [INFO    ] Response: 0xafb05d418 /api/v1/index/resumes/info 200 0
+(2026-03-15 16:44:59) [INFO    ] Request: 127.0.0.1:63021 0xafb05d418 HTTP/1.1 POST /api/v1/index/resumes/vector/insert
+(2026-03-15 16:44:59) [INFO    ] Response: 0xafb05d418 /api/v1/index/resumes/vector/insert 200 0
+(2026-03-15 16:46:08) [INFO    ] Request: 127.0.0.1:63318 0xafb05c018 HTTP/1.1 POST /api/v1/index/create
+WARN_1019: endee/resumes: Create-index request failed: Index with this name already exists for this user
+(2026-03-15 16:46:08) [INFO    ] Response: 0xafb05c018 /api/v1/index/create 409 0
+(2026-03-15 16:46:08) [INFO    ] Request: 127.0.0.1:63318 0xafb05c018 HTTP/1.1 GET /api/v1/index/resumes/info
+(2026-03-15 16:46:08) [INFO    ] Response: 0xafb05c018 /api/v1/index/resumes/info 200 0
+(2026-03-15 16:46:08) [INFO    ] Request: 127.0.0.1:63318 0xafb05c018 HTTP/1.1 POST /api/v1/index/resumes/vector/insert
+(2026-03-15 16:46:08) [INFO    ] Response: 0xafb05c018 /api/v1/index/resumes/vector/insert 200 0
+INFO_2012: -/-: Autosave check running
+(2026-03-15 16:47:07) [INFO    ] Request: 127.0.0.1:63574 0xafb05d418 HTTP/1.1 POST /api/v1/index/create
+WARN_1019: endee/resumes: Create-index request failed: Index with this name already exists for this user
+(2026-03-15 16:47:07) [INFO    ] Response: 0xafb05d418 /api/v1/index/create 409 0
+(2026-03-15 16:47:07) [INFO    ] Request: 127.0.0.1:63574 0xafb05d418 HTTP/1.1 GET /api/v1/index/resumes/info
+(2026-03-15 16:47:07) [INFO    ] Response: 0xafb05d418 /api/v1/index/resumes/info 200 0
+(2026-03-15 16:47:07) [INFO    ] Request: 127.0.0.1:63574 0xafb05d418 HTTP/1.1 POST /api/v1/index/resumes/vector/insert
+(2026-03-15 16:47:07) [INFO    ] Response: 0xafb05d418 /api/v1/index/resumes/vector/insert 200 0
+(2026-03-15 16:49:04) [INFO    ] Request: 127.0.0.1:63976 0xafb05c018 HTTP/1.1 POST /api/v1/index/create
+WARN_1019: endee/resumes: Create-index request failed: Index with this name already exists for this user
+(2026-03-15 16:49:04) [INFO    ] Response: 0xafb05c018 /api/v1/index/create 409 0
+(2026-03-15 16:49:04) [INFO    ] Request: 127.0.0.1:63976 0xafb05c018 HTTP/1.1 POST /api/v1/index/resumes/vector/insert
+(2026-03-15 16:49:04) [INFO    ] Response: 0xafb05c018 /api/v1/index/resumes/vector/insert 200 0
+(2026-03-15 16:49:37) [INFO    ] Request: 127.0.0.1:63982 0xafb05d418 HTTP/1.1 POST /api/v1/index/create
+WARN_1019: endee/resumes: Create-index request failed: Index with this name already exists for this user
+(2026-03-15 16:49:37) [INFO    ] Response: 0xafb05d418 /api/v1/index/create 409 0
+(2026-03-15 16:49:37) [INFO    ] Request: 127.0.0.1:63982 0xafb05d418 HTTP/1.1 POST /api/v1/index/resumes/vector/insert
+(2026-03-15 16:49:37) [INFO    ] Response: 0xafb05d418 /api/v1/index/resumes/vector/insert 200 0
+(2026-03-15 16:49:59) [INFO    ] Request: 127.0.0.1:63984 0xafb05c018 HTTP/1.1 POST /api/v1/index/create
+WARN_1019: endee/resumes: Create-index request failed: Index with this name already exists for this user
+(2026-03-15 16:49:59) [INFO    ] Response: 0xafb05c018 /api/v1/index/create 409 0
+(2026-03-15 16:49:59) [INFO    ] Request: 127.0.0.1:63984 0xafb05c018 HTTP/1.1 POST /api/v1/index/resumes/vector/insert
+(2026-03-15 16:49:59) [INFO    ] Response: 0xafb05c018 /api/v1/index/resumes/vector/insert 200 0
+(2026-03-15 16:50:43) [INFO    ] Request: 127.0.0.1:63987 0xafb05d418 HTTP/1.1 POST /api/v1/index/create
+WARN_1019: endee/resumes: Create-index request failed: Index with this name already exists for this user
+(2026-03-15 16:50:43) [INFO    ] Response: 0xafb05d418 /api/v1/index/create 409 0
+(2026-03-15 16:50:43) [INFO    ] Request: 127.0.0.1:63987 0xafb05d418 HTTP/1.1 POST /api/v1/index/resumes/search
+(2026-03-15 16:50:43) [INFO    ] Response: 0xafb05d418 /api/v1/index/resumes/search 200 0
+INFO_2012: -/-: Autosave check running
+INFO_2012: -/-: Autosave check running
+INFO_2012: -/-: Autosave check running
+(2026-03-15 17:03:02) [INFO    ] Request: 127.0.0.1:64026 0xafb05c018 HTTP/1.1 POST /api/v1/index/create
+WARN_1019: endee/resumes: Create-index request failed: Index with this name already exists for this user
+(2026-03-15 17:03:02) [INFO    ] Response: 0xafb05c018 /api/v1/index/create 409 0
+(2026-03-15 17:03:02) [INFO    ] Request: 127.0.0.1:64026 0xafb05c018 HTTP/1.1 POST /api/v1/index/resumes/search
+(2026-03-15 17:03:02) [INFO    ] Response: 0xafb05c018 /api/v1/index/resumes/search 200 0
+INFO_2012: -/-: Autosave check running

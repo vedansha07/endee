@@ -30,7 +30,14 @@ async def upload_resume(resume_id: str = Form(...), file: UploadFile = File(...)
     
     text = extract_text_from_pdf(file.file)
     embedding = generate_embedding(text)
-    store_resume(resume_id, text, embedding)
+    
+    try:
+        store_resume(resume_id, text, embedding)
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+        raise HTTPException(status_code=503, detail="Vector Database is unavailable. Please ensure the Endee DB server is running.")
+
     
     return {"message": "Resume successfully stored and embedded in Endee"}
 
@@ -51,5 +58,21 @@ async def search_resumes_endpoint(
         text = extract_text_from_pdf(file.file)
         
     query_embedding = generate_embedding(text)
-    results = search_resumes(query_embedding)
+    
+    try:
+        results = search_resumes(query_embedding)
+    except Exception as e:
+        raise HTTPException(status_code=503, detail="Vector Database is unavailable. Please ensure the Endee DB server is running.")
+        
     return results
+
+@app.delete("/clear")
+async def clear_database():
+    try:
+        from vector_store import clear_db
+        clear_db()
+        return {"message": "Database cleared successfully"}
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+        raise HTTPException(status_code=500, detail="Failed to clear database")

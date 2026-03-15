@@ -177,6 +177,26 @@
             color: var(--text-muted);
             line-height: 1.6;
             white-space: pre-wrap;
+            margin-bottom: 0.5rem;
+        }
+
+        .read-more-btn {
+            background: none;
+            border: none;
+            color: var(--primary);
+            font-weight: 600;
+            padding: 0;
+            cursor: pointer;
+            font-size: 0.9rem;
+            width: auto;
+            display: inline-block;
+            text-align: left;
+        }
+
+        .read-more-btn:hover {
+            background: none;
+            color: var(--primary-hover);
+            text-decoration: underline;
         }
         
         .loader {
@@ -358,18 +378,32 @@
                     feedback.textContent = 'No matching resumes found. Try uploading some first!';
                     feedback.className = 'feedback error';
                 } else {
-                    data.forEach(result => {
+                    data.forEach((result, index) => {
                         const scorePct = (result.score * 100).toFixed(1);
-                        const snippet = result.metadata.text.substring(0, 150) + '...';
+                        
+                        const fullText = result.metadata.text || "";
+                        const isLong = fullText.length > 150;
+                        const snippet = isLong ? fullText.substring(0, 150) + '...' : fullText;
+                        
                         const item = document.createElement('div');
                         item.className = 'result-item';
-                        item.innerHTML = `
+                        
+                        let htmlContent = `
                             <div class="result-header">
                                 <span class="result-id">Candidate: ${result.id}</span>
                                 <span class="result-score">Similarity: ${scorePct}%</span>
                             </div>
-                            <div class="result-text"><em>Preview:</em> "${snippet}"</div>
+                            <div class="result-text">
+                                <span id="text-snippet-${index}"><em>Preview:</em> "${snippet}"</span>
+                                <span id="text-full-${index}" style="display: none;">${fullText}</span>
+                            </div>
                         `;
+                        
+                        if (isLong) {
+                            htmlContent += `<button type="button" class="read-more-btn" id="btn-toggle-${index}" onclick="window.toggleText(${index})">Read More</button>`;
+                        }
+                        
+                        item.innerHTML = htmlContent;
                         resultsList.appendChild(item);
                     });
                     resultsContainer.style.display = 'block';
@@ -382,6 +416,23 @@
                 loader.style.display = 'none';
             }
         });
+
+        // Global toggle function
+        window.toggleText = function(index) {
+            const snippetSpan = document.getElementById(`text-snippet-${index}`);
+            const fullSpan = document.getElementById(`text-full-${index}`);
+            const btn = document.getElementById(`btn-toggle-${index}`);
+            
+            if (fullSpan.style.display === 'none') {
+                snippetSpan.style.display = 'none';
+                fullSpan.style.display = 'inline';
+                btn.textContent = 'Show Less';
+            } else {
+                snippetSpan.style.display = 'inline';
+                fullSpan.style.display = 'none';
+                btn.textContent = 'Read More';
+            }
+        };
     </script>
 </body>
 </html>

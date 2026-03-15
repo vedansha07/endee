@@ -18,9 +18,9 @@ Recruiter queries are embedded and compared against stored resume embeddings to 
 
 ## System Architecture
 
-**Resume → Embedding → Endee Vector DB → Semantic Search → Ranked Results**
+**PDF Resume → Extract Text → Embedding → Endee Vector DB → Semantic Search → Ranked Results**
 
-1. Uploaded resumes are textually parsed to extract meaningful data.
+1. Uploaded PDF resumes are textually parsed to extract meaningful data.
 2. The parsed text is embedded mathematically using a dense embedding model (`sentence-transformers`).
 3. These vector embeddings are stored inside the `Endee Vector Database` mapped to text metadata.
 4. User queries are similarly embedded and retrieved via semantic similarity search.
@@ -60,11 +60,11 @@ The server will run at `http://127.0.0.1:8000`. You can access the Swagger docum
 Once the application is running, you can ingest resumes via the `POST /upload` endpoint and search using `POST /search`.
 
 **Upload Example:**
-```json
-{
-  "resume_id": "resume1",
-  "text": "John Doe. Skills: Python, Machine Learning, React, FastAPI."
-}
+Use `multipart/form-data` to submit the file.
+```bash
+curl -X POST "http://127.0.0.1:8000/upload" \
+  -F "resume_id=resume1" \
+  -F "file=@sample_resumes/resume1.pdf"
 ```
 
 **Search Example:**

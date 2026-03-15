@@ -222,8 +222,8 @@
                     <input type="text" id="resumeId" placeholder="e.g., john-doe-resume" required>
                 </div>
                 <div class="form-group">
-                    <label for="resumeText">Resume Text</label>
-                    <textarea id="resumeText" placeholder="Paste the full text of the resume here..." required></textarea>
+                    <label for="resumeFile">Upload PDF Resume</label>
+                    <input type="file" id="resumeFile" accept="application/pdf" style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: 8px; font-size: 1rem; box-sizing: border-box;" required>
                 </div>
                 <button type="submit" id="uploadBtn">
                     <span class="loader" id="uploadLoader"></span>
@@ -266,17 +266,26 @@
             const feedback = document.getElementById('uploadFeedback');
             
             const resumeId = document.getElementById('resumeId').value;
-            const text = document.getElementById('resumeText').value;
+            const fileInput = document.getElementById('resumeFile');
+            
+            if (fileInput.files.length === 0) {
+                feedback.textContent = '❌ Please select a PDF file';
+                feedback.className = 'feedback error';
+                return;
+            }
 
             btn.disabled = true;
             loader.style.display = 'inline-block';
             feedback.className = 'feedback';
 
+            const formData = new FormData();
+            formData.append('resume_id', resumeId);
+            formData.append('file', fileInput.files[0]);
+
             try {
                 const response = await fetch(`${API_URL}/upload`, {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ resume_id: resumeId, text: text })
+                    body: formData
                 });
 
                 if (!response.ok) throw new Error('Failed to upload resume');
@@ -327,14 +336,15 @@
                 } else {
                     data.forEach(result => {
                         const scorePct = (result.score * 100).toFixed(1);
+                        const snippet = result.metadata.text.substring(0, 150) + '...';
                         const item = document.createElement('div');
                         item.className = 'result-item';
                         item.innerHTML = `
                             <div class="result-header">
-                                <span class="result-id">${result.id}</span>
+                                <span class="result-id">Candidate: ${result.id}</span>
                                 <span class="result-score">Similarity: ${scorePct}%</span>
                             </div>
-                            <div class="result-text">${result.metadata.text}</div>
+                            <div class="result-text"><em>Preview:</em> "${snippet}"</div>
                         `;
                         resultsList.appendChild(item);
                     });
